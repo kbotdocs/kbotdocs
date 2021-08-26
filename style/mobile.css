@@ -19,15 +19,16 @@ aside {
     position: fixed;
     width: 100vw;
     height: calc(100vh - var(--header-height));
-    padding-bottom: 0px;
+    padding: var(--aside-padding) var(--viewbox-padding) 0px var(--viewbox-padding);
     border: none;
     overflow: auto;
     display: none;
 }
 
 div#list-box {
-    padding: auto var(--viewbox-padding);
-    width: calc(100% - var(--viewbox-padding));
+    left: var(--viewbox-padding);
+    width: calc(100% - var(--viewbox-padding) * 2);
+    float: left;
 }
 
 div#global-box {
