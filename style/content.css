@@ -1,0 +1,122 @@
+
+main {
+    --main-padding-top: 72px;
+    --main-font-size: 16px;
+    --section-padding-bottom: 24px;
+    --table-bold-border-color: #ddd;
+    --article-margin: 24px;
+    --con-margin-bottom: 48px;
+    --con-small-margin-left: 24px;
+    --h2-title-font-size: 24px;
+    --h3-title-font-size: 20px;
+    --title-margin: 24px 0px;
+    --thead-height: 56px;
+    --td-padding: 16px;
+
+    padding-top: var(--main-padding-top);
+    padding-left: 48px;
+    padding-right: var(--viewbox-padding);
+    color: var(--text-color);
+    font-size: var(--main-font-size);
+}
+
+section {
+    padding-bottom: var(--section-padding-bottom);
+}
+
+.title {
+    font-weight: 700;
+}
+
+article {
+    margin-left: var(--article-margin);
+    margin-bottom: var(--article-margin);
+}
+
+div.con article:last-child {
+    margin-bottom: 0px;
+}
+
+div.con {
+    margin-bottom: var(--con-margin-bottom);
+}
+
+div.con.small {
+    margin-left: var(--con-small-margin-left);
+}
+
+.title {
+    margin: var(--title-margin);
+}
+
+h2.title {
+    font-size: var(--h2-title-font-size);
+}
+
+h2.title:first-child {
+    margin-top: 0px;
+}
+
+h3.title {
+    font-size: var(--h3-title-font-size);
+}
+
+main :is(p, a, li) {
+    line-height: 2;
+}
+
+li.small-list-el {
+    cursor: pointer;
+}
+
+mark {
+    background-color: var(--color-red);
+    font-weight: 700;
+    color: var(--mark-color);
+}
+
+main a {
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: var(--color-green);
+    text-decoration-thickness: 4px;
+    cursor: pointer;
+}
+
+main li {
+    list-style-position: inside;
+}
+
+ul.small-list {
+    margin-bottom: 24px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table * {
+    box-sizing: border-box;
+}
+
+thead {
+    height: var(--thead-height);
+    background-color: var(--box-color);
+}
+
+th, td {
+    border: 2px solid var(--border-color);
+}
+
+th {
+    border: 2px solid var(--border-color);
+    border-bottom: 4px solid var(--table-bold-border-color);
+}
+
+td {
+    padding: var(--td-padding);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

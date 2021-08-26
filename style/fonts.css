@@ -1,0 +1,49 @@
+
+@font-face {
+    font-family: kbotdocs;
+    src: url(fonts/NanumSquareR.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: kbotdocs;
+    src: url(fonts/Poppins-Regular.ttf) format('truetype');
+    unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
+}
+
+@font-face {
+    font-family: kbotdocs;
+    src: url(fonts/NanumSquareL.ttf) format('truetype');
+    font-weight: 300;
+}
+@font-face {
+    font-family: kbotdocs;
+    src: url(fonts/Poppins-Light.ttf) format('truetype');
+    unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: kbotdocs;
+    src: url(fonts/NanumSquareB.ttf) format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: kbotdocs;
+    src: url(fonts/Poppins-Bold.ttf) format('truetype');
+    unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: kbotdocs;
+    src: url(fonts/NanumSquareEB.ttf) format('truetype');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: kbotdocs;
+    src: url(fonts/Poppins-ExtraBold.ttf) format('truetype');
+    unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
+    font-weight: 900;
+}

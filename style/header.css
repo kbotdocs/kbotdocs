@@ -1,0 +1,40 @@
+
+header {
+    --header-padding: 8px var(--viewbox-padding);
+    --header-title-font-size: 1.5rem;
+
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    padding: var(--header-padding);
+    box-sizing: border-box;
+    z-index: 999;
+
+    background-color: var(--background-color);
+    border-bottom: 2px solid var(--border-color);
+}
+
+div#header-title {
+    display: flex;
+    align-items: center;
+}
+
+div#header-title * {
+    display: inline-block;
+}
+
+div#header-title :is(#b, #n) {
+    font-size: var(--header-title-font-size);
+    font-weight: 700;
+}
+
+div#header-title #b {
+    color: var(--text-color);
+}
+
+div#header-title #n {
+    color: var(--color-red);
+}

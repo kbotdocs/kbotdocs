@@ -1,0 +1,75 @@
+
+:root {
+    --viewbox-padding: 15vw;
+    --viewbox-width: calc(100vw - var(--scroll-size));
+    --background-color: white;
+    --color-red: #ff0095;
+    --color-green: #00ffc8;
+    --box-color: #f8f8f8;
+    --border-color: #eee;
+    --text-color: black;
+    --mark-color: white;
+    --header-height: 72px;
+    --scroll-size: 24px;
+    --scroll-color: #00000021;
+    --layout-template: 30vw calc(70vw - var(--scroll-size));
+    --text-line-height: 1.75;
+}
+
+*::-webkit-scrollbar {
+    z-index: 999;
+    width: var(--scroll-size);
+    height: var(--scroll-size);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-color);
+    background-clip: padding-box;
+    border: calc(var(--scroll-size) / 3) solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px transparent;
+}
+
+*::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'kbotdocs';
+    font-weight: normal;
+}
+
+html, body {
+    width: var(--viewbox-width);
+    height: 100vh;
+    background-color: var(--background-color);
+}
+
+aside, main {
+    height: 100%;
+}
+
+div#global-box {
+    margin-top: var(--header-height);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: var(--layout-template);
+}
+
+strong {
+    font-weight: 700;
+}
+
+a:link, a:visited {
+    color: var(--text-color);
+}
