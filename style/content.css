@@ -5,13 +5,14 @@ main {
     --section-padding-bottom: 24px;
     --table-bold-border-color: #ddd;
     --article-margin: 24px;
-    --con-margin-bottom: 48px;
+    --con-margin-bottom: 96px;
     --con-small-margin-left: 24px;
     --h2-title-font-size: 24px;
     --h3-title-font-size: 20px;
     --title-margin: 24px 0px;
     --thead-height: 56px;
     --td-padding: 16px;
+    --code-font-size: 14px;
 
     padding-top: var(--main-padding-top);
     padding-left: 48px;
@@ -87,8 +88,12 @@ main li {
     list-style-position: inside;
 }
 
-ul.small-list {
+/* ul.small-list {
     margin-bottom: 24px;
+} */
+
+article.table {
+    overflow: auto;
 }
 
 table {
@@ -98,6 +103,7 @@ table {
 
 table * {
     box-sizing: border-box;
+    font-size: var(--code-font-size);
 }
 
 thead {
@@ -119,4 +125,9 @@ td {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    line-height: 2;
+}
+
+td li {
+    margin-left: 12px;
 }

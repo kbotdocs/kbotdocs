@@ -1,6 +1,9 @@
 
+pre * {
+    white-space: pre;
+}
+
 code {
-    --code-font-size: 14px;
     --codebox-padding: 20px;
     --codebox-radius: 8px;
 }
@@ -25,6 +28,10 @@ pre code.hljs {
     padding: var(--codebox-padding);
 }
 
+td.hljs-ln-line.hljs-ln-code {
+    padding-right: var(--codebox-padding);
+}
+
 .hljs-ln-line {
     border: none;
 }
@@ -32,6 +39,7 @@ pre code.hljs {
 .hljs-ln-line.hljs-ln-numbers {
     text-align: center;
     padding-right: var(--codebox-padding);
+    user-select: none;
 }
 
 .hljs {

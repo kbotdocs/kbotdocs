@@ -50,12 +50,14 @@
                     <li class="list-el" id="d1-5">메시지 보내기</li>
                 </ul>
                 <ul class="list" id="legacyAPI"><h3 class="list-title">Legacy API</h3>
-                    <li class="list-el" id="d2-1">객체</li>
-                    <li class="list-el" id="d2-2">이벤트 리스너</li>
+                    <li class="list-el" id="d2-1">레거시 API</li>
+                    <li class="list-el" id="d2-2">객체</li>
+                    <li class="list-el" id="d2-3">이벤트 리스너</li>
                 </ul>
                 <ul class="list" id="API2"><h3 class="list-title">API2</h3>
-                    <li class="list-el" id="d3-1">객체</li>
-                    <li class="list-el" id="d3-2">이벤트</li>
+                    <li class="list-el" id="d3-1">API2</li>
+                    <li class="list-el" id="d3-2">객체</li>
+                    <li class="list-el" id="d3-3">이벤트</li>
                 </ul>
                 <ul class="list" id="js"><h3 class="list-title">JavaScript</h3>
                     <li class="list-el">기초</li>
@@ -88,7 +90,7 @@
         </aside>
         <main>
             <section id="summary">
-                <div class="con" id="d1-1">
+                <div class="con" id="dd1-1">
                     <h2 class="title">알아두기</h2>
                     <article>
                         <p>카카오톡봇 개발 전 꼭 알아두어야 할 몇 가지 사항이 있습니다!</p>
@@ -101,7 +103,7 @@
                         </ul>
                     </article>
                 </div>
-                <div class="con" id="d1-2">
+                <div class="con" id="dd1-2">
                     <h2 class="title">카카오톡봇이 무엇인가요?</h2>
                     <article>
                         <p>카카오톡봇은 <strong>카카오톡 상단바 알림을 읽고, 자동으로 응답하는 자동응답 봇</strong>이에요. 이걸 개발하기 위해서는 
@@ -110,13 +112,15 @@
                         등의 앱이 쓰인답니다.</p>
                     </article>
                 </div>
-                <div class="con" id="d1-3">
+                <div class="con" id="dd1-3">
                     <h2 class="title">개발 준비</h2>
-                    <ul class="small-list">
-                        <li class="small-list-el" id="d1-3-1">앱 설치</li>
-                        <li class="small-list-el" id="d1-3-2">부계정을 사용하신다고요?</li>
-                    </ul>
-                    <div class="con small" id="d1-3-1">
+                    <article>
+                        <ul class="small-list">
+                            <li class="small-list-el" id="d1-3-1">앱 설치</li>
+                            <li class="small-list-el" id="d1-3-2">부계정을 사용하신다고요?</li>
+                        </ul>
+                    </article>
+                    <div class="con small" id="dd1-3-1">
                         <h3 class="title">앱 설치</h3>
                         <article>
                             <p>카카오톡봇을 개발하려면, 일단 개발하고 구동시킬 앱이 필요하겠죠? 지금 이 편과 앞으로의 편 모두 <strong>메신저봇R</strong>을 기준으로 할게요.</p>
@@ -136,7 +140,7 @@
                             </ul>
                         </article>
                     </div>
-                    <div class="con small" id="d1-3-2">
+                    <div class="con small" id="dd1-3-2">
                         <h3 class="title">부계정을 사용하신다고요?</h3>
                         <article>
                             <p>부계정을 사용할건데 별도로 작업해야할 것이 있냐고요? 음... 모른다는 뜻이 아닙니다.</p>
@@ -149,7 +153,7 @@
                         </article>
                     </div>
                 </div>
-                <div class="con" id="d1-4">
+                <div class="con" id="dd1-4">
                     <h2 class="title">response 함수</h2>
                     <article>
                         <p>처음 스크립트를 생성하면, 아래처럼 코드가 이미 작성되어 있을 거예요.</p>
@@ -171,10 +175,10 @@ function response(room, msg, sender, isGroupChat, replier, imageDB, packageName)
 
 //아래 4개의 메소드는 액티비티 화면을 수정할때 사용됩니다.
 function onCreate(savedInstanceState, activity) {
-  var textView = new android.widget.TextView(activity);
-  textView.setText("Hello, World!");
-  textView.setTextColor(android.graphics.Color.DKGRAY);
-  activity.setContentView(textView);
+    var textView = new android.widget.TextView(activity);
+    textView.setText("Hello, World!");
+    textView.setTextColor(android.graphics.Color.DKGRAY);
+    activity.setContentView(textView);
 }
 
 function onStart(activity) {}
@@ -207,45 +211,58 @@ function onStop(activity) {}</code></pre>
                             <thead>
                                 <tr>
                                     <th>자료형</th>
-                                    <th>매개변수 이름</th>
                                     <th>설명</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td><code class="block">String</code></td>
-                                    <td><code class="block">room</code></td>
-                                    <td>메시지가 발신된 채팅방의 이름을 나타냅니다.</td>
+                                    <td>
+                                        <code class="block">room</code><br><br>
+                                        메시지가 발신된 채팅방의 이름을 나타냅니다.
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><code class="block">String</code></td>
-                                    <td><code class="block">msg</code></td>
-                                    <td>발신된 메시지의 내용을 나타냅니다.</td>
+                                    <td>
+                                        <code class="block">msg</code><br><br>
+                                        발신된 메시지의 내용을 나타냅니다.
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><code class="block">String</code></td>
-                                    <td><code class="block">sender</code></td>
-                                    <td>메시지를 발신한 유저의 이름을 나타냅니다.</td>
+                                    <td>
+                                        <code class="block">sender</code><br><br>
+                                        메시지를 발신한 유저의 이름을 나타냅니다.
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><code class="block">Boolean</code></td>
-                                    <td><code class="block">isGroupChat</code></td>
-                                    <td>메시지가 발신된 방이 그룹 채팅방(3인 이상)인지의 여부를 나타냅니다.</td>
+                                    <td>
+                                        <code class="block">isGroupChat</code><br><br>
+                                        메시지가 발신된 방이 그룹 채팅방(3인 이상)인지의 여부를 나타냅니다.
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><code class="block">Object</code></td>
-                                    <td><code class="block">replier</code></td>
-                                    <td>응답 기능, 세션 등을 가지고 있는 객체입니다.</td>
+                                    <td>
+                                        <code class="block">replier</code><br><br>
+                                        응답 기능, 세션 등을 가지고 있는 객체입니다.
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><code class="block">Object</code></td>
-                                    <td><code class="block">imageDB</code></td>
-                                    <td>메시지를 발신한 유저의 프로필 이미지의 정보를 담은 객체입니다.</td>
+                                    <td>
+                                        <code class="block">imageDB</code><br><br>
+                                        메시지를 발신한 유저의 프로필 이미지의 정보를 담은 객체입니다.
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><code class="block">String</code></td>
-                                    <td><code class="block">packageName</code></td>
-                                    <td>메시지가 발신된 앱의 패키지명을 반환합니다. (카카오톡의 경우: <code class="block">com.kakao.talk</code>)</td>
+                                    <td>
+                                        <code class="block">packageName</code><br><br>
+                                        메시지가 발신된 앱의 패키지명을 반환합니다. (카카오톡의 경우: <code class="block">com.kakao.talk</code>)
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -254,7 +271,7 @@ function onStop(activity) {}</code></pre>
                         <p>유용한 매개변수들이죠? 다만, response 함수의 매개변수를 사용할 때 유의해야 할 점이 있어요. <mark>response 함수의 매개변수는 반드시 response 함수 안에서만 사용을 해야 한답니다!</mark></p>
                     </article>
                 </div>
-                <div class="con" id="d1-5">
+                <div class="con" id="dd1-5">
                     <h2 class="title">메시지 보내기</h2>
                     <article>
                         <p>이제 슬슬 자동응답봇이라면 기본적으로 갖추어야 할 기본적인 기능을 알아봐야겠죠? 이번에는 <strong>카카오톡봇을 이용하여 메시지를 보내는 방법</strong>을 알아볼 겁니다!</p>
@@ -268,7 +285,7 @@ function onStop(activity) {}</code></pre>
 }</code></pre>
                     </article>
                     <article>
-                        <p><a href="#d1-4">response 함수</a> 편에서 본 <code class="block">replier</code>객체가 보이죠? 2번째 줄 처럼 보낼 메시지만 입력하면, <strong>메시지가 발신된 방으로</strong> 메시지를 보냅니다.</p>
+                        <p><a href="d1-4" class="anchor">response 함수</a> 편에서 본 <code class="block">replier</code>객체가 보이죠? 2번째 줄 처럼 보낼 메시지만 입력하면, <strong>메시지가 발신된 방으로</strong> 메시지를 보냅니다.</p>
                         <p>그리고 4번째 줄처럼 메시지를 보낼 방 이름도 입력하면, <storng>입력된 방으로</storng> 메시지를 보냅니다.</p>
                     </article>
                     <article>
@@ -278,8 +295,945 @@ function onStop(activity) {}</code></pre>
                         <pre><code class="language-javascript">Api.replyRoom('방 이름', 'Hello World!');</code></pre>
                     </article>
                     <article>
-                        <p>이렇게 메시지를 보낼 방의 이름과 보낼 메시지를 입력하면 됩니다. <code class="block">Api#replyRoom</code>은 response 함수의 안쪽뿐만 아니라 바깥쪽에서도 사용할 수 있죠!</p>
+                        <p>이렇게 메시지를 보낼 방의 이름과 보낼 메시지를 입력하면 됩니다. <code class="block">Api.replyRoom()</code>은 response 함수의 안쪽뿐만 아니라 바깥쪽에서도 사용할 수 있죠!</p>
                     </article>
+                </div>
+            </section>
+            <section id="legacyAPI">
+                <div class="con" id="dd2-1">
+                    <h2 class="title">레거시 API</h2>
+                    <article>
+                        <p><mark>지금 이 편과 API2 편은 꼭 읽을 필요는 없어요. 필요할 때 마다 찾아서 보기만 해도 상관없어요. 오히려 JavaScript 편으로 먼저 가는 것이 좋을 수도 있답니다.</mark></p>
+                    </article>
+                    <article>
+                        <p>갑자기 뜬금없이 레거시 API라니, '하늘에서 떨어졌나 땅에서 솟았나' 하는 느낌일 거예요. 하지만 이때까지 나온 소스 코드는 모두 <strong>레거시 API</strong>를 기반으로 한 것이었답니다!</p>
+                        <p>카카오톡봇 개발에 사용되는 내장 API는 두 가지가 있어요. 하나는 지금 이 편에서 다룰 <strong>레거시 API</strong>이고, 다른 하나는 다음 편에서 알아볼 <strong>API2</strong>라는 것이죠.</p>
+                    </article>
+                    <article>
+                        <p>일단 레거시 API의 객체부터 알아보도록 합시다!</p>
+                    </article>
+                </div>
+                <div class="con" id="dd2-2">
+                    <h2 class="title">객체</h2>
+                    <article>
+                        <p>아까도 말씀드렸듯이, JavaScript 편으로 먼저 가는 것이 더 나을 수도 있어요. JS 객체의 개념을 이해하지 못하면 잘 사용을 못할 수도 있거든요.</p>
+                        <p>아무튼 레거시 API의 객체들에 대해 알아볼 거예요. 레거시 API의 객체는 다양하답니다!</p>
+                    </article>
+                    <article>
+                        <ul class="small-list">
+                            <li class="small-list-el" id="d2-2-1">Api</li>
+                            <li class="small-list-el" id="d2-2-2">Utils</li>
+                            <li class="small-list-el" id="d2-2-3">FileStream</li>
+                            <li class="small-list-el" id="d2-2-4">DataBase</li>
+                            <li class="small-list-el" id="d2-2-5">Log</li>
+                            <li class="small-list-el" id="d2-2-6">Device</li>
+                            <li class="small-list-el" id="d2-2-7">Bridge</li>
+                            <li class="small-list-el" id="d2-2-8">AppData</li>
+                        </ul>
+                    </article>
+                    <div class="con small" id="dd2-2-1">
+                        <h3 class="title">Api</h3>
+                        <article>
+                            <p><strong>Api</strong> 객체는 카카오톡봇의 근본적인 기능을 구현하거나 스크립트에 접근하기 위한 메소드들을 모아놓은 객체에요. 어떤 메소드들이 있는지 볼까요?</p>
+                        </article>
+                        <article class="table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>자료형</th>
+                                        <th>설명</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code class="block">android.content.Context</code></td>
+                                        <td>
+                                            <code class="block">getContext()</code><br><br>
+                                            앱의 Context(컨텍스트)를 가져옵니다.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">Boolean</code></td>
+                                        <td>
+                                            <code class="block">reload(<i>scriptName?: String</i>, <i>throwOnError?: Boolean = false</i>)</code><br>
+                                            <code class="block">compile(<i>scriptName?: String</i>, <i>throwOnError?: Boolean = false</i>)</code><br><br>
+                                            스크립트를 재컴파일합니다.<br>
+                                            컴파일 성공 여부를 반환합니다.<br><br>
+                                            <code class="block">scriptName?</code>: 재컴파일할 스크립트 이름 (인자가 없을 시 모든 스크립트를 대상으로 재컴파일)<br>
+                                            <code class="block">throwOnError?</code>: 컴파일 에러 시 에러 <code class="block">throw</code> 여부
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">Number</code></td>
+                                        <td>
+                                            <code class="block">prepare(<i>scriptName: String</i>)</code><br><br>
+                                            스크립트가 한번도 컴파일된 적이 없을 경우 컴파일합니다.<br>
+                                            컴파일 에러 시 에러를 <code class="block">throw</code>합니다. 반환값은 다음과 같습니다:<br><br>
+                                            스크립트가 존재하지 않음: <code class="block">0</code><br>
+                                            컴파일에 성공함: <code class="block">1</code><br>
+                                            컴파일된 적이 있음: <code class="block">2</code><br><br>
+                                            <code class="block">scriptName</code>: 컴파일할 스크립트 이름
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">Boolean</code></td>
+                                        <td>
+                                            <code class="block">unload(<i>scriptName: String</i>)</code><br><br>
+                                            스크립트를 컴파일 전 상태로 전환합니다.<br>
+                                            언로드 성공 여부를 반환합니다.<br><br>
+                                            <code class="block">scriptName</code>: 언로드할 스크립트 이름
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">Boolean</code></td>
+                                        <td>
+                                            <code class="block">off(<i>scriptName?: String</i>)</code><br><br>
+                                            스크립트의 작동을 비활성화합니다.<br>
+                                            주어진 인자가 없을 경우, 무조건 <code class="block">true</code>를 반환합니다.<br>
+                                            주어진 인자가 존재할 경우, 비활성화 성공 여부를 반환합니다.<br><br>
+                                            <code class="block">scriptName?</code>: 비활성화할 스크립트 이름
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">Boolean</code></td>
+                                        <td>
+                                            <code class="block">on(<i>scriptName?: String</i>)</code><br><br>
+                                            스크립트의 작동을 활성화합니다.<br>
+                                            주어진 인자가 없을 경우, 무조건 <code class="block">true</code>를 반환합니다.<br>
+                                            주어진 인자가 존재할 경우, 스크립트의 존재 여부를 반환합니다.<br><br>
+                                            <code class="block">scriptName?</code>: 활성화할 스크립트 이름
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">Boolean</code></td>
+                                        <td>
+                                            <code class="block">isOn(<i>scriptName: String</i>)</code><br><br>
+                                            스크립트의 활성화 여부를 반환합니다.<br><br>
+                                            <code class="block">scriptName</code>: 활성화 여부를 확인할 스크립트 이름
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">Boolean</code></td>
+                                        <td>
+                                            <code class="block">isCompiled(<i>scriptName: String</i>)</code><br><br>
+                                            스크립트의 컴파일 완료 여부를 반환합니다.<br><br>
+                                            <code class="block">scriptName</code>: 컴파일 완료 여부를 확인할 스크립트 이름
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">Boolean</code></td>
+                                        <td>
+                                            <code class="block">isCompiling(<i>scriptName: String</i>)</code><br><br>
+                                            스크립트의 컴파일 진행 여부를 반환합니다.<br><br>
+                                            <code class="block">scriptName</code>: 컴파일 진행 여부를 확인할 스크립트 이름
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">Array</code></td>
+                                        <td>
+                                            <code class="block">getScriptNames()</code><br><br>
+                                            스크립트의 컴파일 완료 여부를 반환합니다.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">Boolean</code></td>
+                                        <td>
+                                            <code class="block">replyRoom(<i>room: String, message: String, hideToast?: String = false</i>)</code><br><br>
+                                            특정 방에 메시지를 보냅니다.<br>
+                                            메시지를 보낼 방에 대한 세션의 존재 여부를 반환합니다.<br><br>
+                                            <code class="block">room</code>: 메시지를 보낼 방 이름<br>
+                                            <code class="block">message</code>: 보낼 메시지의 내용<br>
+                                            <code class="block">hideToast?</code>: 메시지를 보낼 방의 세션 존재 여부를 토스트 메시지로 출력할 것인지의 여부
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">Boolean</code></td>
+                                        <td>
+                                            <code class="block">canReply(<i>room: String</i>)</code><br><br>
+                                            특정 방에 메시지를 수신할 수 있는지의 여부를 반환합니다.<br><br>
+                                            <code class="block">room</code>: 메시지 수신 가능 여부를 확인할 방의 이름
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">undefined</code></td>
+                                        <td>
+                                            <code class="block">showToast(<i>content: String, length?: Number = android.widget.Toast.LENGTH_SHORT</i>)</code><br><br>
+                                            토스트 메시지를 발생합니다.<br><br>
+                                            <code class="block">content</code>: 토스트 메시지로 출력할 내용<br>
+                                            <code class="block">length?</code>: 토스트 메시지의 유지 시간<br>
+                                            <ul>
+                                                <li><code class="block">android.widget.Toast.LENGTH_SHORT = <i>0</i> (<i>0x00000000</i>)</code>: 짧은 시간 동안 출력</li>
+                                                <li><code class="block">android.widget.Toast.LENGTH_LONG = <i>1</i> (<i>0x00000001</i>)</code>: 긴 시간 동안 출력</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">Boolean</code></td>
+                                        <td>
+                                            <code class="block">makeNoti(<i>title: String, content: String, id?: Number</i>)</code><br><br>
+                                            상단바 노티피케이션을 생성합니다.<br><br>
+                                            <code class="block">title</code>: 노티피케이션의 제목<br>
+                                            <code class="block">content</code>: 노티피케이션의 내용<br>
+                                            <code class="block">id?</code>: 노티피케이션 아이디 (같은 아이디의 노티피케이션은 내용을 갱신)<br>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">String</code></td>
+                                        <td>
+                                            <code class="block">papagoTranslate(<i>sourceLanguage: String, targetLanguage: String, content: String, errorToString?: String = false</i>)</code><br><br>
+                                            입력된 텍스트에 대한 Papago NMT 번역 결과를 반환합니다.<br><br>
+                                            <code class="block">sourceLanguage</code>: 출발어의 언어코드<br>
+                                            <code class="block">targetLanguage</code>: 번역어(도착어)의 언어코드<br>
+                                            <code class="block">content</code>: 번역할 텍스트<br>
+                                            <code class="block">errorToString</code>: 에러를 문자열로 반환할 것인지에 대한 여부
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">undefined</code></td>
+                                        <td>
+                                            <code class="block">gc()</code><br><br>
+                                            가비지 컬렉팅을 강제로 시작합니다.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">undefined</code></td>
+                                        <td>
+                                            <code class="block">UIThread(<i>func: Function, onComplete: Function</i>)</code><br><br>
+                                            UI쓰레드 상에서 특정 함수를 실행합니다.<br><br>
+                                            <code class="block">func</code>: UI쓰레드 상에서 실행할 함수<br>
+                                            <code class="block">complete</code>: 결과를 처리할 함수<br>
+                                            매개변수:<br>
+                                            <ul>
+                                                <li><code class="block">error</code>: <code class="block">func</code>함수 실행 도중 일어난 에러의 객체를 전달받는 인자</li>
+                                                <li><code class="block">result</code>: <code class="block">func</code>함수의 반환값을 전달받는 인자</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">Number</code></td>
+                                        <td>
+                                            <code class="block">getActiveThreadsCound(<i>scriptName?: String</i>)</code><br><br>
+                                            스크립트의 활성 쓰레드 수를 반환합니다.<br><br>
+                                            <code class="block">scriptName?</code>: 활성 쓰레드 수를 확인할 스크립트 이름 (인자가 없을 시 이 메소드를 호출한 스크립트의 활성 쓰레드 수 반환)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">undefined</code></td>
+                                        <td>
+                                            <code class="block">interruptThreads(<i>scriptName?: String</i>)</code><br><br>
+                                            스크립트의 쓰레드에 <code class="block">interrupt</code>요청을 보냅니다.<br><br>
+                                            <code class="block">scriptName?</code>: 쓰레드에 <code class="block">interrupt</code>요청을 보낼 스크립트 이름 (인자가 없을 시 이 메소드를 호출한 스크립트의 쓰레드에 <code class="block">interrupt</code>요청)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">Boolean</code></td>
+                                        <td>
+                                            <code class="block">isTerminated(<i>scriptName?: String</i>)</code><br><br>
+                                            <code class="block">interruptThreads()</code> 실행 이후, 스크립트의 모든 쓰레드의 <code class="block">interrupt</code>처리 완료 여부를 반환합니다.<br><br>
+                                            <code class="block">scriptName?</code>: 모든 쓰레드의 <code class="block">interrupt</code>처리 완료 여부를 확인할 스크립트 이름 (인자가 없을 시 이 메소드를 호출한 스크립트의 모든 쓰레드의 <code class="block">interrupt</code>처리 완료 여부 반환)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">Boolean</code></td>
+                                        <td>
+                                            <code class="block">markAsRead(<i>room?: String, packageName?: String</i>)</code><br><br>
+                                            채팅방의 메시지를 읽음 처리합니다.<br><br>
+                                            <code class="block">room?</code>: 메시지를 읽음 처리할 채팅방의 이름 (인자가 없을 시 메시지가 온 채팅방의 메시지를 읽음 처리)<br>
+                                            <code class="block">packageName?</code>: 메시지를 읽음 처리할 메신저 앱의 패키지명
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </article>
+                    </div>
+                    <div class="con small" id="dd2-2-2">
+                        <h3 class="title">Utils</h3>
+                        <article>
+                            <p>그럼 <strong>Utils</strong> 객체는 어떤 객체일까요? 이 객체도 카카오톡봇의 근본적인 기능을 구현하기 위한 메소드들이 있답니다!</p>
+                        </article>
+                        <article class="table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>자료형</th>
+                                        <th>설명</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code class="block">String</code></td>
+                                        <td>
+                                            <code class="block">getWebText(<i>url: String</i>)</code><br><br>
+                                            입력된 URL의 HTML을 반환합니다. (동기)<br><br>
+                                            <code class="block">url</code>: HTML을 로드할 웹 페이지의 URL
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">org.jsoup.nodes</code></td>
+                                        <td>
+                                            <code class="block">parse(<i>url: String</i>)</code><br><br>
+                                            입력된 URL의 HTML을 로드한 <code class="block">org.jsoup.nodes.Document</code>를 반환합니다. (동기, <code class="block">GET</code>방식)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">Number</code></td>
+                                        <td>
+                                            <code class="block">getAndroidVersionCode()</code><br><br>
+                                            앱 구동 환경의 안드로이드 버전 코드를 반환합니다.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">String</code></td>
+                                        <td>
+                                            <code class="block">getAndroidVersionName()</code><br><br>
+                                            앱 구동 환경의 안드로이드 버전 이름을 반환합니다.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">String</code></td>
+                                        <td>
+                                            <code class="block">getPhoneBrand</code><br><br>
+                                            앱 구동 기기의 브랜드명을 반환합니다.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">String</code></td>
+                                        <td>
+                                            <code class="block">getPhoneModel()</code><br><br>
+                                            앱 구동 기기의 모델명을 반환합니다.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </article>
+                    </div>
+                    <div class="con small" id="dd2-2-3">
+                        <h3 class="title">FileStream</h3>
+                        <article>
+                            <p>이번 객체는 이름에서부터 느낌이 오지 않나요? <strong>FileStream</strong> 객체는 내부 저장소의 파일을 다루는 객체입니다! 카카오톡봇을 개발하다 보면 많이 사용할 객체이니 잘 알아보세요.</p>
+                        </article>
+                        <article class="table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>자료형</th>
+                                        <th>설명</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code class="block">String</code></td>
+                                        <td>
+                                            <code class="block">read(<i>path: String</i>)</code><br><br>
+                                            특정 파일의 내용을 반환합니다.<br><br>
+                                            <code class="block">path</code>: 내용을 읽을 파일의 경로
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">String</code></td>
+                                        <td>
+                                            <code class="block">write(<i>path: String, data: String</i>)</code><br><br>
+                                                파일을 새로 생성하거나, 특정 파일의 내용을 덮어씁니다.<br>
+                                                생성하거나 덮어쓴 파일의 최종 내용을 반환합니다.<br><br>
+                                                <code class="block">path</code>: 생성하거나 덮어쓸 파일의 경로<br>
+                                                <code class="block">data</code>: 생성한 파일의 내용이나 파일에 덮어쓸 내용
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">String</code></td>
+                                        <td>
+                                            <code class="block">append(<i>path: String, data: String</i>)</code><br><br>
+                                            기존의 파일의 내용에 새로운 내용을 이어 씁니다.<br>
+                                            이어 쓴 파일의 최종 내용을 반환합니다.<br><br>
+                                            <code class="block">path</code>: 내용을 이어 쓸 파일의 경로<br>
+                                            <code class="block">data</code>: 파일에 이어 쓸 내용
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">Boolean</code></td>
+                                        <td>
+                                            <code class="block">remove(<i>path: String</i>)</code><br><br>
+                                            파일을 삭제합니다.<br>
+                                            <code class="block">java.io.File.delete()</code>의 결과값을 반환합니다.<br><br>
+                                            <code class="block">path</code>: 삭제할 파일의 경로
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </article>
+                    </div>
+                    <div class="con small" id="dd2-2-4">
+                        <h3 class="title">DataBase</h3>
+                        <article>
+                            <p><strong>DataBase</strong> 객체는 <strong>FileStream</strong> 객체와 마찬가지로 파일을 다루는 객체입니다. 근데 뭐가 다르냐고요? 이 객체는 스크립트의 로컬 폴더에 한해서만 파일을 조작할 수 있습니다!</p>
+                        </article>
+                        <article class="table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>자료형</th>
+                                        <th>설명</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code class="block">String</code></td>
+                                        <td>
+                                            <code class="block">getDataBase(<i>fileName: String</i>)</code><br><br>
+                                            스크립트 로컬 폴더 내 특정 파일의 내용을 반환합니다.<br><br>
+                                            <code class="block">fileName</code>: 내용을 읽을 파일의 이름
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">String</code></td>
+                                        <td>
+                                            <code class="block">setDataBase(<i>fileName: String, data: String</i>)</code><br><br>
+                                                파일을 새로 생성하거나, 스크립트 로컬 폴더 내 특정 파일의 내용을 덮어씁니다.<br>
+                                                생성하거나 덮어쓴 파일의 최종 내용을 반환합니다.<br><br>
+                                                <code class="block">fileName</code>: 생성하거나 덮어쓸 파일의 이름<br>
+                                                <code class="block">data</code>: 생성한 파일의 내용이나 파일에 덮어쓸 내용
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">String</code></td>
+                                        <td>
+                                            <code class="block">appendDataBase(<i>fileName: String, data: String</i>)</code><br><br>
+                                            기존의 파일의 내용에 새로운 내용을 이어 씁니다.<br>
+                                            이어 쓴 파일의 최종 내용을 반환합니다.<br><br>
+                                            <code class="block">fileName</code>: 내용을 이어 쓸 파일의 이름<br>
+                                            <code class="block">data</code>: 파일에 이어 쓸 내용
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">Boolean</code></td>
+                                        <td>
+                                            <code class="block">removeDataBase(<i>fileName: String</i>)</code><br><br>
+                                            스크립트 로컬 폴더 내 특정 파일을 삭제합니다. (메신저봇R 옵션의 "삭제 시 백업기능"이 활성화 상태인 경우, <code class="block"><i>fileName</i>.bak</code>으로 백업.)<br>
+                                            <code class="block">java.io.File.delete()</code>의 결과값을 반환합니다.<br><br>
+                                            <code class="block">fileName</code>: 삭제할 파일의 이름
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </article>
+                    </div>
+                    <div class="con small" id="dd2-2-5">
+                        <h3 class="title">Log</h3>
+                        <article>
+                            <p><strong>Log</strong> 객체는 앱 내 스크립트 로그에 로그를 기록할 수 있게 하는 객체입니다.</p>
+                        </article>
+                        <article class="table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>자료형</th>
+                                        <th>설명</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code class="block">undefined</code></td>
+                                        <td>
+                                            <code class="block">d(<i>data: String, showToast?: Boolean = false</i>)</code><br>
+                                            <code class="block">debug(<i>data: String, showToast?: Boolean = false</i>)</code><br><br>
+                                            디버그 로그를 작성합니다.<br><br>
+                                            <code class="block">data</code>: 작성할 디버그 로그의 내용<br>
+                                            <code class="block">showToast?</code>: 작성된 로그를 토스트 메시지로 출력할 것인지의 여부
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">undefined</code></td>
+                                        <td>
+                                            <code class="block">e(<i>data: String, showToast?: Boolean = false</i>)</code><br>
+                                            <code class="block">error(<i>data: String, showToast?: Boolean = false</i>)</code><br><br>
+                                            에러 로그를 작성합니다.<br><br>
+                                            <code class="block">data</code>: 작성할 에러 로그의 내용<br>
+                                            <code class="block">showToast?</code>: 작성된 로그를 토스트 메시지로 출력할 것인지의 여부
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">undefined</code></td>
+                                        <td>
+                                            <code class="block">i(<i>data: String, showToast?: Boolean = false</i>)</code><br>
+                                            <code class="block">info(<i>data: String, showToast?: Boolean = false</i>)</code><br><br>
+                                            정보 로그를 작성합니다.<br><br>
+                                            <code class="block">data</code>: 작성할 정보 로그의 내용<br>
+                                            <code class="block">showToast?</code>: 작성된 로그를 토스트 메시지로 출력할 것인지의 여부
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">undefined</code></td>
+                                        <td>
+                                            <code class="block">clear()</code><br><br>
+                                            로그를 모두 삭제합니다.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </article>
+                    </div>
+                    <div class="con small" id="dd2-2-6">
+                        <h3 class="title">Device</h3>
+                        <article>
+                            <p><strong>Device</strong> 객체는 구동 환경 / 기기에 관한 정보를 제공하는 메소드들을 모은 객체입니다. 빈번하게는 아니지만 꽤 애용할 만한 객체에요.</p>
+                        </article>
+                        <article class="table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>자료형</th>
+                                        <th>설명</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code class="block">android.os.Build</code></td>
+                                        <td>
+                                            <code class="block">getBuild()</code><br><br>
+                                            <code class="block">android.os.Build()</code>값을 반환합니다.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">Number</code></td>
+                                        <td>
+                                            <code class="block">getAndroidVersionCode()</code><br><br>
+                                            앱 구동 환경의 안드로이드 버전 코드를 반환합니다.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">String</code></td>
+                                        <td>
+                                            <code class="block">getAndroidVersionName()</code><br><br>
+                                            앱 구동 환경의 안드로이드 버전 이름을 반환합니다.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">String</code></td>
+                                        <td>
+                                            <code class="block">getPhoneBrand()</code><br><br>
+                                            앱 구동 기기의 브랜드명을 반환합니다.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">String</code></td>
+                                        <td>
+                                            <code class="block">getPhoneModel()</code><br><br>
+                                            앱 구동 기기의 모델명을 반환합니다.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">Boolean</code></td>
+                                        <td>
+                                            <code class="block">isCharging()</code><br><br>
+                                            앱 구동 기기가 충전 중인지의 여부를 반환합니다.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">String</code></td>
+                                        <td>
+                                            <code class="block">getPlugType()</code><br><br>
+                                            앱 구동 기기의 충전기 타입을 반환합니다.<br>
+                                            반환값은 다음과 같습니다:<br>
+                                            <ul>
+                                                <li><code class="block">acc</code></li>
+                                                <li><code class="block">wireless</code></li>
+                                                <li><code class="block">usb</code></li>
+                                                <li><code class="block">unknown</code></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">Number</code></td>
+                                        <td>
+                                            <code class="block">getBatteryLevel()</code><br><br>
+                                            앱 구동 기기의 배터리 잔량(%)을 반환합니다.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">Number</code></td>
+                                        <td>
+                                            <code class="block">getBatteryHealth()</code><br><br>
+                                            앱 구동 기기의 배터리 건강 상태를 나타내는 상수를 반환합니다.<br>
+                                            반환값은 다음과 같습니다:<br>
+                                            <ul>
+                                                <li><code class="block">android.os.BatteryManager.BATTERY_HEALTH_UNKNOWN = <i>1</i> (<i>0x00000001</i>)</code></li>
+                                                <li><code class="block">android.os.BatteryManager.BATTERY_HEALTH_GOOD = <i>2</i> (<i>0x00000002</i>)</code></li>
+                                                <li><code class="block">android.os.BatteryManager.BATTERY_HEALTH_OVERHEAT = <i>3</i> (<i>0x00000003</i>)</code></li>
+                                                <li><code class="block">android.os.BatteryManager.BATTERY_HEALTH_DEAD = <i>4</i> (<i>0x00000004</i>)</code></li>
+                                                <li><code class="block">android.os.BatteryManager.BATTERY_HEALTH_VOLTAGE = <i>5</i> (<i>0x00000005</i>)</code></li>
+                                                <li><code class="block">android.os.BatteryManager.BATTERY_HEALTH_UNSPECIFIED_FAILURE = <i>6</i> (<i>0x00000006</i>)</code></li>
+                                                <li><code class="block">android.os.BatteryManager.BATTERY_HEALTH_COLD = <i>7</i> (<i>0x00000007</i>)</code></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">Number</code></td>
+                                        <td>
+                                            <code class="block">getBatteryTemperature()</code><br><br>
+                                            앱 구동 기기의 배터리 온도(<code class="block"><i>temp</i> * 10</code>)값을 반환합니다.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">Number</code></td>
+                                        <td>
+                                            <code class="block">getBatteryVoltage()</code><br><br>
+                                            앱 구동 기기의 배터리 전압(mV)을 반환합니다.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">Number</code></td>
+                                        <td>
+                                            <code class="block">getBatteryStatus()</code><br><br>
+                                            앱 구동 기기의 배터리 상태를 나타내는 상수를 반환합니다.<br>
+                                            반환값은 다음과 같습니다:<br>
+                                            <ul>
+                                                <li><code class="block">android.os.BatteryManager.BATTERY_STATUS_UNKNOWN = <i>1</i> (<i>0x00000001</i>)</code></li>
+                                                <li><code class="block">android.os.BatteryManager.BATTERY_STATUS_CHARGING = <i>2</i> (<i>0x00000002</i>)</code></li>
+                                                <li><code class="block">android.os.BatteryManager.BATTERY_STATUS_DISCHARGING = <i>3</i> (<i>0x00000003</i>)</code></li>
+                                                <li><code class="block">android.os.BatteryManager.BATTERY_STATUS_NOT_CHARGING = <i>4</i> (<i>0x00000004</i>)</code></li>
+                                                <li><code class="block">android.os.BatteryManager.BATTERY_STATUS_FULL = <i>5</i> (<i>0x00000005</i>)</code></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">android.content.Intent</code></td>
+                                        <td>
+                                            <code class="block">getBatteryIntent()</code><br><br>
+                                            <code class="block">context.registerReceiver(null, IntentFilter(Intent.ACTION_BATTERY_CHANGED))</code>값을 반환합니다.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </article>
+                    </div>
+                    <div class="con small" id="dd2-2-7">
+                        <h3 class="title">Bridge</h3>
+                        <article>
+                            <p><strong>Bridge</strong> 객체는 이름처럼 다른 스크립트의 전역 스코프에 접근할 수 있도록 하는 메소드를 모은 것이에요. 알아두면 언젠가 유용하게 쓰일 객체이니 기억해두세요!</p>
+                        </article>
+                        <article class="table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>자료형</th>
+                                        <th>설명</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code class="block">org.mozilla.javascript.ScriptableObject</code></td>
+                                        <td>
+                                            <code class="block">getScopeOf(<i>scriptName: String</i>)</code><br><br>
+                                            특정 스크립트의 전역 스코프를 반환합니다.<br><br>
+                                            <code class="block">scriptName</code>: 반환받고자 하는 전역 스코프의 스크립트 이름
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">Boolean</code></td>
+                                        <td>
+                                            <code class="block">isAllowed(<i>scriptName: String</i>>)</code><br><br>
+                                            특정 스크립트의 <code class="block">Bridge</code>에 의한 접근 허용 여부를 반환합니다.<br><br>
+                                            <code class="block">scriptName</code>: <code class="block">Bridge</code>의 접근 혀용 여부를 확인할 스크립트 이름
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </article>
+                    </div>
+                    <div class="con small" id="dd2-2-8">
+                        <h3 class="title">AppData</h3>
+                        <article>
+                            <p><strong>AppData</strong> 객체는 앱의 데이터에 관한 기능들을 위한 객체에요.</p>
+                        </article>
+                        <article class="table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>자료형</th>
+                                        <th>설명</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code class="block">undefined</code></td>
+                                        <td>
+                                            <code class="block">putBoolean(<i>key: String, boolean: Boolean</i>)</code><br><br>
+                                            앱 데이터에 <code class="block">Boolean</code>형 데이터를 씁니다.<br><br>
+                                            <code class="block">key</code>: 쓸 앱 데이터의 키<br>
+                                            <code class="block">boolean</code>: <code class="block">key</code>에 대한 <code class="block">Boolean</code>형 데이터
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">Boolean</code></td>
+                                        <td>
+                                            <code class="block">getBoolean(<i>key: String</i>)</code><br><br>
+                                            앱 데이터로부터 특정 키 값에 대응되는 <code class="block">Boolean</code>형 데이터를 반환합니다.<br><br>
+                                            <code class="block">key</code>: 불러올 앱 데이터에 대응되는 키 이름<br>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">undefined</code></td>
+                                        <td>
+                                            <code class="block">putInt(<i>key: String, integer: Number</i>)</code><br><br>
+                                            앱 데이터에 <code class="block">Number</code>(정수)형 데이터를 씁니다.<br><br>
+                                            <code class="block">key</code>: 쓸 앱 데이터의 키<br>
+                                            <code class="block">integer</code>: <code class="block">key</code>에 대한 <code class="block">Number</code>(정수)형 데이터
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">Number</code></td>
+                                        <td>
+                                            <code class="block">getInt(<i>key: String</i>)</code><br><br>
+                                            앱 데이터로부터 특정 키 값에 대응되는 <code class="block">Number</code>(정수)형 데이터를 반환합니다.<br><br>
+                                            <code class="block">key</code>: 불러올 앱 데이터에 대응되는 키 이름<br>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">undefined</code></td>
+                                        <td>
+                                            <code class="block">putString(<i>key: String, string: String</i>)</code><br><br>
+                                            앱 데이터에 <code class="block">String</code>형 데이터를 씁니다.<br><br>
+                                            <code class="block">key</code>: 쓸 앱 데이터의 키<br>
+                                            <code class="block">string</code>: <code class="block">key</code>에 대한 <code class="block">String</code>형 데이터
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">String</code></td>
+                                        <td>
+                                            <code class="block">getString(<i>key: String</i>)</code><br><br>
+                                            앱 데이터로부터 특정 키 값에 대응되는 <code class="block">String</code>형 데이터를 반환합니다.<br><br>
+                                            <code class="block">key</code>: 불러올 앱 데이터에 대응되는 키<br>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">undefined</code></td>
+                                        <td>
+                                            <code class="block">remove(<i>key: String</i>)</code><br><br>
+                                            <code class="block">AppData</code>로 저장한 특정 키에 대응되는 앱 데이터를 삭제합니다.<br><br>
+                                            <code class="block">key</code>: 삭제할 앱 데이터에 대한 키
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">undefined</code></td>
+                                        <td>
+                                            <code class="block">clear()</code><br><br>
+                                            <code class="block">AppData</code>로 저장한 모든 앱 데이터를 삭제합니다.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </article>
+                    </div>
+                </div>
+                <div class="con" id="dd2-3">
+                    <h2 class="title">이벤트 리스너</h2>
+                    <article>
+                        레거시 API에는 이벤트 리스너가 지정되어 있습니다. 상황에 맞는 이벤트 리스너를 사용하여 더 다양한 기능을 만들거나, 더 다양한 상황에 대응할 수 있죠!
+                    </article>
+                    <article>
+                        <ul class="small-list">
+                            <li class="small-list-el" id="d2-3-1">response 함수</li>
+                            <li class="small-list-el" id="d2-3-2">onStartCompile 함수</li>
+                            <li class="small-list-el" id="d2-3-3">onNotificationPosted 함수</li>
+                            <li class="small-list-el" id="d2-3-4">onCreate 함수</li>
+                            <li class="small-list-el" id="d2-3-5">onResume 함수</li>
+                            <li class="small-list-el" id="d2-3-6">onPause 함수</li>
+                            <li class="small-list-el" id="d2-3-7">onStop 함수</li>
+                        </ul>
+                    </article>
+                    <div class="con small" id="dd2-3-1">
+                        <h3 class="title">response 함수</h3>
+                        <article>
+                            <p>response 함수에 대한 설명은 Summary 편의 <a class="anchor" href="d1-4">response 함수</a>에 작성되어 있습니다!</p>
+                        </article>
+                    </div>
+                    <div class="con small" id="dd2-3-2">
+                        <h3 class="title">onStartCompile 함수</h3>
+                        <article>
+                            <p><code class="block">onStartCompile</code> 함수는 스크립트의 컴파일이 수행되려 할 때, 컴파일 수행 전 호출되는 이벤트 리스너에요.</p>
+                        </article>
+                        <article>
+                            <pre><code class="language-javascript">function onStartCompile() {
+                                
+}</code></pre>
+                        </article>
+                    </div>
+                    <div class="con small" id="dd2-3-3">
+                        <h3 class="title">onNotificationPosted 함수</h3>
+                        <article>
+                            <p><code class="block">onNotificationPosted</code> 함수는 기기에 상단바 노티피케이션이 생성될 때마다 호출되는 이벤트 리스너에요. 방법은 어려울지 모르지만, 이 이벤트 리스너를 이용해 다른 메신저 앱의 자동응답봇을 개발할 수 있어요!</p>
+                        </article>
+                        <article>
+                            <pre><code class="language-javascript">function onNotificationPosted(statusBarNotification, sessionManager) {
+
+}</code></pre>
+                        </article>
+                        <article class="table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>자료형</th>
+                                        <th>설명</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code class="block">android.service.notification.StatusBarNotification</code></td>
+                                        <td>
+                                            <code class="block">statusBarNotification</code><br><br>
+                                            <a href="https://developer.android.com/reference/android/service/notification/StatusBarNotification" target="_blank">안드로이드 공식 문서</a>를 참고하세요.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">Object</code></td>
+                                        <td>
+                                            <code class="block">sessionManager</code><br><br>
+                                            앱이 공식 지원하지 않는 메신저에 사용하기 위한 인자입니다.<br><br>
+                                            <ul>
+                                                <li>
+                                                    <code class="block">bindSession(<i>packageName?: String, room: String, action?: android.app.Notification.Action</i>): Boolean</code><br>
+                                                    : 다른 메신저 앱의 특정 방에 채팅이 왔을 때 메시지를 전송합니다.<br>
+                                                    <code class="block">action?</code>과 앱이 자동 분석한 답장 액션 모두 <code class="block">null</code>이 아닌지의 여부를 반환합니다.<br>
+                                                    <ul>
+                                                        <li><code class="block">packageName?</code>: 메시지를 보낼 메신저 앱의 패키지명</li>
+                                                        <li><code class="block">room</code>: 메시지를 보낼 메신저 앱 내의 채팅방</li>
+                                                        <li><code class="block">packageName?</code>: 메시지 전송 구형을 위한 <code class="block">android.app.Notification.Action</code>값</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </article>
+                    </div>
+                    <div class="con small" id="dd2-3-4">
+                        <h3 class="title">onCreate 함수</h3>
+                        <article>
+                            <p>지금부터는 스크립트 액티비티에 관한 이벤트 리스너에요. 안드로이드 객체를 사용하여 새 화면을 만들 수 있는건데, <code class="block">onCreate</code> 함수는 스트립트 액티비티의 <code class="block">onCreate</code>가 호출될 때 호출되는 이벤트 리스너에요.</p>
+                        </article>
+                        <article>
+                            <pre><code class="language-javascript">function onCreate(savedInstanceState, activity) {
+
+}</code></pre>
+                        </article>
+                        <article class="table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>자료형</th>
+                                        <th>설명</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code class="block">android.os.Bundle</code></td>
+                                        <td>
+                                            <code class="block">savedInstanceState</code><br><br>
+                                            액티비티의 <code class="block">onCreate</code>의 인자인 <code class="block">savedInstanceState</code>입니다.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="block">android.app.Activity</code></td>
+                                        <td>
+                                            <code class="block">activity</code><br><br>
+                                            해당 이벤트 리스너가 호출되었을 때의 액티비티입니다.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </article>
+                    </div>
+                    <div class="con small" id="dd2-3-5">
+                        <h3 class="title">onPause 함수</h3>
+                        <article>
+                            <p><code class="block">onPause</code> 함수는 스트립트 액티비티의 <code class="block">onPause</code>가 호출될 때 호출되는 이벤트 리스너에요.</p>
+                        </article>
+                        <article>
+                            <pre><code class="language-javascript">function onPause(activity) {
+
+}</code></pre>
+                        </article>
+                        <article class="table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>자료형</th>
+                                        <th>설명</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code class="block">android.app.Activity</code></td>
+                                        <td>
+                                            <code class="block">activity</code><br><br>
+                                            해당 이벤트 리스너가 호출되었을 때의 액티비티입니다.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </article>
+                    </div>
+                    <div class="con small" id="dd2-3-6">
+                        <h3 class="title">onResume 함수</h3>
+                        <article>
+                            <p><code class="block">onResume</code> 함수는 스트립트 액티비티의 <code class="block">onResume</code>이 호출될 때 호출되는 이벤트 리스너에요.</p>
+                        </article>
+                        <article>
+                            <pre><code class="language-javascript">function onResume(activity) {
+
+}</code></pre>
+                        </article>
+                        <article class="table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>자료형</th>
+                                        <th>설명</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code class="block">android.app.Activity</code></td>
+                                        <td>
+                                            <code class="block">activity</code><br><br>
+                                            해당 이벤트 리스너가 호출되었을 때의 액티비티입니다.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </article>
+                    </div>
+                    <div class="con small" id="dd2-3-7">
+                        <h3 class="title">onStop 함수</h3>
+                        <article>
+                            <p><code class="block">onStop</code> 함수는 스트립트 액티비티의 <code class="block">onStop</code>이 호출될 때 호출되는 이벤트 리스너에요.</p>
+                        </article>
+                        <article>
+                            <pre><code class="language-javascript">function onStop(activity) {
+
+}</code></pre>
+                        </article>
+                        <article class="table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>자료형</th>
+                                        <th>설명</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code class="block">android.app.Activity</code></td>
+                                        <td>
+                                            <code class="block">activity</code><br><br>
+                                            해당 이벤트 리스너가 호출되었을 때의 액티비티입니다.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </article>
+                    </div>
                 </div>
             </section>
         </main>

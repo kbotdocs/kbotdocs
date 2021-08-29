@@ -1,6 +1,6 @@
 
 :root {
-    --viewbox-padding: 15vw;
+    --viewbox-padding: 12.5vw;
     --viewbox-width: calc(100vw - var(--scroll-size));
     --background-color: white;
     --color-red: #ff0095;

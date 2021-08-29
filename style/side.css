@@ -1,7 +1,7 @@
 
 aside {
     --aside-padding: 48px;
-    --list-box-width: 15vw;
+    --list-box-width: calc(30vw - var(--viewbox-padding));
     --list-box-height: 80vh;
     --title-margin: 8px 0px;
     --title-font-size: 1.25rem;
@@ -14,14 +14,19 @@ aside {
     box-sizing: border-box;
     background-color: var(--box-color);
     padding: var(--aside-padding);
+    padding-right: 0px;
     /* padding-left: var(--viewbox-padding); */
     position: relative;
     border-right: 2px solid var(--border-color);
 }
 
+aside * {
+    user-select: none;
+}
+
 div#list-box {
     position: fixed;
-    left: 15vw;
+    left: var(--viewbox-padding);
     width: var(--list-box-width);
     height: var(--list-box-height);
     overflow: auto;

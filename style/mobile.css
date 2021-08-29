@@ -51,10 +51,6 @@ main {
     box-sizing: border-box;
 }
 
-article.table {
-    overflow: auto;
-}
-
 code {
     --code-font-size: 12px;
     --codebox-padding: 15px;

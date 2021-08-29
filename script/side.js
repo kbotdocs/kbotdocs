@@ -5,6 +5,7 @@ const HEADER_TITLE  = document.querySelector('div#header-title');
 const LIST_TITLE    = document.querySelectorAll('h3.list-title');
 const LIST_EL       = document.querySelectorAll('li.list-el');
 const SMALL_LIST_EL = document.querySelectorAll('li.small-list-el');
+const ANCHOR        = document.querySelectorAll('a.anchor');
 
 
 if(window.matchMedia('(max-width: 767px)').matches) {
@@ -37,7 +38,12 @@ SMALL_LIST_EL.forEach(e => {
     });
 });
 
-
+ANCHOR.forEach(e => {
+    e.addEventListener('click', _e => {
+        _e.preventDefault();
+        scroll(e.getAttribute('href'));
+    });
+});
 
 function scroll(id) {
     let bh = 'smooth';
@@ -45,7 +51,7 @@ function scroll(id) {
     if(window.matchMedia('(max-width: 767px)').matches) bh = 'auto';
 
     window.scrollTo({
-        top: window.pageYOffset + document.querySelector(`div#${id}.con`).getBoundingClientRect().top - (HEADER.offsetHeight + 72),
+        top: window.pageYOffset + document.querySelector(`div#d${id}.con`).getBoundingClientRect().top - (HEADER.offsetHeight + 72),
         behavior: bh
     });
 
