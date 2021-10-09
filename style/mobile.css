@@ -55,3 +55,11 @@ code {
     --code-font-size: 12px;
     --codebox-padding: 15px;
 }
+
+a.contributor {
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-decoration: none;
+    cursor: pointer;
+    line-height: 1;
+}

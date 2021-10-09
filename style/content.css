@@ -84,6 +84,44 @@ main a {
     cursor: pointer;
 }
 
+a.contributor {
+    font-weight: 700;
+    font-size: 2rem;
+    text-decoration: none;
+    cursor: pointer;
+    line-height: 1;
+}
+
+a.contributor#jisungbin {
+    background-color: #b1f2ff;
+    color: #222;
+}
+
+a.contributor#violetxf {
+    background-color: #c800ff;
+    color: white;
+}
+
+a.contributor#doami {
+    background-color: #00e1ff;
+    color: #111;
+}
+
+a.contributor#justicehui {
+    background-color: #ffbf00;
+    color: #111;
+}
+
+a.contributor#pinmilk {
+    background-color: #ff9dff;
+    color: #222;
+}
+
+a.contributor#ju- {
+    background-color: #00ffea;
+    color: #222;
+}
+
 main li {
     list-style-position: inside;
 }
