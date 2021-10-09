@@ -28,8 +28,12 @@ pre code.hljs {
     padding: var(--codebox-padding);
 }
 
-td.hljs-ln-line.hljs-ln-code {
-    padding-right: var(--codebox-padding);
+pre code.hljs::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.181);
+}
+
+/* td.hljs-ln-line.hljs-ln-code {
+    margin-right: var(--codebox-padding);
 }
 
 .hljs-ln-line {
@@ -40,10 +44,14 @@ td.hljs-ln-line.hljs-ln-code {
     text-align: center;
     padding-right: var(--codebox-padding);
     user-select: none;
-}
+} */
 
 .hljs {
     background: #222;
+    color: #ddd;
+}
+
+.hljs-punctuation {
     color: #ddd;
 }
 
@@ -51,7 +59,7 @@ td.hljs-ln-line.hljs-ln-code {
     color:#555;
 }
 
-.hljs-punctuation, .hljs-tag {
+.hljs-tag {
     color: #444a;
 }
 
@@ -88,7 +96,7 @@ td.hljs-ln-line.hljs-ln-code {
     color: #ff00f7;
 }
 
-.hljs-regexp {
+.hljs-regexp, .hljs-attr {
     color: #ff00cc;
 }
 
