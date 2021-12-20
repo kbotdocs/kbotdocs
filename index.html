@@ -17,13 +17,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap">
-    <link rel="stylesheet" href="style/fonts.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css" />
     <link rel="stylesheet" href="style/base.css">
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/side.css">
     <link rel="stylesheet" href="style/content.css">
+    <link rel="stylesheet" href="style/contributer.css">
     <link rel="stylesheet" href="style/code.css">
     <link rel="stylesheet" href="style/dark.css" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="style/darkcode.css" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" href="style/mobile.css" media="(max-width: 767px)">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.7.0/highlightjs-line-numbers.min.js"></script> -->
@@ -42,14 +45,14 @@
     <div id="global-box">
         <aside>
             <div id="list-box">
-                <ul class="list" id="summary"><h3 class="list-title">Summary</h3>
+                <ul class="list" id="summary"><h3 class="list-title">개요</h3>
                     <li class="list-el" id="d1-1">알아두기</li>
                     <li class="list-el" id="d1-2">카카오톡봇이 무엇인가요?</li>
                     <li class="list-el" id="d1-3">개발 준비</li>
                     <li class="list-el" id="d1-4">response 함수</li>
                     <li class="list-el" id="d1-5">메시지 보내기</li>
                 </ul>
-                <ul class="list" id="legacyAPI"><h3 class="list-title">Legacy API</h3>
+                <ul class="list" id="legacyAPI"><h3 class="list-title">레거시 API</h3>
                     <li class="list-el" id="d2-1">레거시 API</li>
                     <li class="list-el" id="d2-2">객체</li>
                     <li class="list-el" id="d2-3">이벤트 리스너</li>
@@ -59,26 +62,12 @@
                     <li class="list-el" id="d3-2">객체</li>
                     <li class="list-el" id="d3-3">이벤트</li>
                 </ul>
-                <ul class="list" id="js"><h3 class="list-title">JavaScript</h3>
-                    <li class="list-el">기초</li>
-                    <li class="list-el">자료형</li>
-                    <li class="list-el">연산자</li>
-                    <li class="list-el">배열 (Array객체)</li>
-                    <li class="list-el">객체 (Object객체)</li>
-                    <li class="list-el">조건문</li>
-                    <li class="list-el">반복문</li>
-                    <li class="list-el">정규식 (RegExp객체)</li>
-                    <li class="list-el">내장 객체</li>
-                    <li class="list-el">내장 함수</li>
-                    <li class="list-el">예외</li>
-                    <li class="list-el">함수</li>
+                <ul class="list" id="advanced"><h3 class="list-title">심화</h3>
+                    <li class="list-el" id="d4-1">패키지/클래스</li>
+                    <li class="list-el" id="d4-2">ADB</li>
+                    <li class="list-el" id="d4-3">소켓 통신</li>
                 </ul>
-                <ul class="list" id="advanced"><h3 class="list-title">Advanced</h3>
-                    <li class="list-el">외부 패키지/클래스</li>
-                    <li class="list-el">ADB/Broadcast</li>
-                    <li class="list-el">소켓 통신</li>
-                </ul>
-                <ul class="sideList" id="appendix"><h3 class="list-title">Appendix</h3>
+                <ul class="sideList" id="appendix"><h3 class="list-title">부록</h3>
                     <li class="list-el" id="d6-1">기여자</li>
                     <li class="list-el" id="d6-2">문의하기</li>
                 </ul>
@@ -165,31 +154,31 @@
  * (string) imageDB.getProfileBase64()
  * (string) packageName
  */
-function response(room, msg, sender, isGroupChat, replier, imageDB, packageName) {
+function response (room, msg, sender, isGroupChat, replier, imageDB, packageName) {
   
 }
 
 //아래 4개의 메소드는 액티비티 화면을 수정할때 사용됩니다.
-function onCreate(savedInstanceState, activity) {
+function onCreate (savedInstanceState, activity) {
     var textView = new android.widget.TextView(activity);
-    textView.setText("Hello, World!");
+    textView.setText('Hello, World!');
     textView.setTextColor(android.graphics.Color.DKGRAY);
     activity.setContentView(textView);
 }
 
-function onStart(activity) {}
+function onStart (activity) {  }
 
-function onResume(activity) {}
+function onResume (activity) {  }
 
-function onPause(activity) {}
+function onPause (activity) {  }
 
-function onStop(activity) {}</code></pre>
+function onStop (activity) {  }</code></pre>
                     </article>
                     <article>
                         <p>복잡해 보이죠? 하지만 카카오톡봇 제작에 가장 많이 쓰이는 것은 이것 하나입니다.</p>
                     </article>
                     <article>
-                        <pre><code class="language-javascript">function response(room, msg, sender, isGroupChat, replier, imageDB, packageName) {
+                        <pre><code class="language-javascript">function response (room, msg, sender, isGroupChat, replier, imageDB, packageName) {
   
 }</code></pre>
                     </article>
@@ -411,7 +400,7 @@ function onStop(activity) {}</code></pre>
                         <p>메시지를 보내는 방법은 크게 두 가지가 있습니다. 첫 번째 방법부터 알아볼까요?</p>
                     </article>
                     <article>
-                        <pre><code class="language-javascript">function response(room, msg, sender, isGroupChat, replier, imageDB, packageName) {
+                        <pre><code class="language-javascript">function response (room, msg, sender, isGroupChat, replier, imageDB, packageName) {
     replier.reply('Hello World!');
     // 또는
     replier.reply('방 이름', 'Hello World!');
@@ -436,9 +425,6 @@ function onStop(activity) {}</code></pre>
                 <div class="con" id="dd2-1">
                     <h2 class="title">레거시 API</h2>
                     <article>
-                        <p><mark>지금 이 편과 API2 편은 꼭 읽을 필요는 없어요. 필요할 때 마다 찾아서 보기만 해도 상관없어요. 오히려 JavaScript 편으로 먼저 가는 것이 좋을 수도 있답니다.</mark></p>
-                    </article>
-                    <article>
                         <p>갑자기 뜬금없이 레거시 API라니, '하늘에서 떨어졌나 땅에서 솟았나' 하는 느낌일 거예요. 하지만 이때까지 나온 소스 코드는 모두 <strong>레거시 API</strong>를 기반으로 한 것이었답니다!</p>
                         <p>카카오톡봇 개발에 사용되는 내장 API는 두 가지가 있어요. 하나는 지금 이 편에서 다룰 <strong>레거시 API</strong>이고, 다른 하나는 다음 편에서 알아볼 <strong>API2</strong>라는 것이죠.</p>
                     </article>
@@ -449,7 +435,6 @@ function onStop(activity) {}</code></pre>
                 <div class="con" id="dd2-2">
                     <h2 class="title">객체</h2>
                     <article>
-                        <p>아까도 말씀드렸듯이, JavaScript 편으로 먼저 가는 것이 더 나을 수도 있어요. JS 객체의 개념을 이해하지 못하면 잘 사용을 못할 수도 있거든요.</p>
                         <p>아무튼 레거시 API의 객체들에 대해 알아볼 거예요. 레거시 API의 객체는 다양하답니다!</p>
                     </article>
                     <article>
@@ -467,7 +452,7 @@ function onStop(activity) {}</code></pre>
                     <div class="con small" id="dd2-2-1">
                         <h3 class="title">Api</h3>
                         <article>
-                            <p><code class="block">Api</code> 객체는 카카오톡봇의 근본적인 기능을 구현하거나 스크립트에 접근하기 위한 메소드들을 모아놓은 객체예요. 어떤 메소드들이 있는지 볼까요?</p>
+                            <p><code class="block">Api</code> 객체는 카카오톡봇의 근본적인 기능을 구현하거나 스크립트에 접근하기 위한 메소드들을 모아놓은 것이에요. 어떤 메소드들이 있는지 볼까요?</p>
                         </article>
                         <article class="table">
                             <table>
@@ -1187,7 +1172,7 @@ function onStop(activity) {}</code></pre>
                             <p><code class="block">onStartCompile</code> 함수는 스크립트의 컴파일이 수행되려 할 때, 컴파일 수행 전 호출되는 이벤트 리스너에요.</p>
                         </article>
                         <article>
-                            <pre><code class="language-javascript">function onStartCompile() {
+                            <pre><code class="language-javascript">function onStartCompile () {
                                 
 }</code></pre>
                         </article>
@@ -1198,7 +1183,7 @@ function onStop(activity) {}</code></pre>
                             <p><code class="block">onNotificationPosted</code> 함수는 기기에 상단바 노티피케이션이 생성될 때마다 호출되는 이벤트 리스너에요. 방법은 어려울지 모르지만, 이 이벤트 리스너를 이용해 다른 메신저 앱의 자동응답봇을 개발할 수 있어요!</p>
                         </article>
                         <article>
-                            <pre><code class="language-javascript">function onNotificationPosted(statusBarNotification, sessionManager) {
+                            <pre><code class="language-javascript">function onNotificationPosted (statusBarNotification, sessionManager) {
 
 }</code></pre>
                         </article>
@@ -1247,7 +1232,7 @@ function onStop(activity) {}</code></pre>
                             <p>지금부터는 스크립트 액티비티에 관한 이벤트 리스너에요. 안드로이드 객체를 사용하여 새 화면을 만들 수 있는건데, <code class="block">onCreate</code> 함수는 스트립트 액티비티의 <code class="block">onCreate</code>가 호출될 때 호출되는 이벤트 리스너에요.</p>
                         </article>
                         <article>
-                            <pre><code class="language-javascript">function onCreate(savedInstanceState, activity) {
+                            <pre><code class="language-javascript">function onCreate (savedInstanceState, activity) {
 
 }</code></pre>
                         </article>
@@ -1284,7 +1269,7 @@ function onStop(activity) {}</code></pre>
                             <p><code class="block">onPause</code> 함수는 스트립트 액티비티의 <code class="block">onPause</code>가 호출될 때 호출되는 이벤트 리스너에요.</p>
                         </article>
                         <article>
-                            <pre><code class="language-javascript">function onPause(activity) {
+                            <pre><code class="language-javascript">function onPause (activity) {
 
 }</code></pre>
                         </article>
@@ -1314,7 +1299,7 @@ function onStop(activity) {}</code></pre>
                             <p><code class="block">onResume</code> 함수는 스트립트 액티비티의 <code class="block">onResume</code>이 호출될 때 호출되는 이벤트 리스너에요.</p>
                         </article>
                         <article>
-                            <pre><code class="language-javascript">function onResume(activity) {
+                            <pre><code class="language-javascript">function onResume (activity) {
 
 }</code></pre>
                         </article>
@@ -1344,7 +1329,7 @@ function onStop(activity) {}</code></pre>
                             <p><code class="block">onStop</code> 함수는 스트립트 액티비티의 <code class="block">onStop</code>이 호출될 때 호출되는 이벤트 리스너에요.</p>
                         </article>
                         <article>
-                            <pre><code class="language-javascript">function onStop(activity) {
+                            <pre><code class="language-javascript">function onStop (activity) {
 
 }</code></pre>
                         </article>
@@ -1373,9 +1358,6 @@ function onStop(activity) {}</code></pre>
             <section id="api2">
                 <div class="con" id="dd3-1">
                     <h2 class="title">API2</h2>
-                    <article>
-                        <p><mark>Legacy API 편에서도 언급했듯이, 필요할 때 마다 찾아서 보기만 해도 상관없어요. 오히려 JavaScript 편으로 먼저 가는 것이 나을 것이라고 생각해요.</mark></p>
-                    </article>
                     <article>
                         <p>API2는 레거시 API보다 더 최근에 공개된 내장 API에요. 레거시 API보다 지원하는 앱이 적지만, 디스코드봇을 개발해본 분이라면 레거시 API보다 더 친숙하게 느껴질 거예요.</p>
                         <p>기존 내장 API (레거시 API)보다 더 체계적인 구조로 되어 있어요. 레거시 API에만 존재하는 기능도 있지만, API2에만 존재하는 기능도 있으니 한번 공부해보면 좋을 거예요. 안 그래요?</p>
@@ -2830,20 +2812,20 @@ doc: org.jsoup.nodes.Document</code></pre>
                         </article>
                         <article>
                             <pre><code class="language-json">{
-    "room" : String, // 메시지가 온 방의 이름
-    "content" : String, // 메시지의 내용
-    "isGroupChat" : Boolean, // 방 내 인원이 3인 이상인지의 여부
-    "isDebugRoom" : Boolean, // 디버깅룸에서 온 메시지인지의 여부
-    "author" : { // 메시지 전송자에 대한 정보를 담고 있는 객체
-        "name" : String, // 메시지를 보낸 유저의 이름
-        "avatar" : { // 메시지 전송자 프로필에 대한 정보
-            "getBase64" : Function, // 전송자 프로필의 Base64 값을 반환
-            "getBitmap" : Function // 전송자 프로필의 android.graphics.Bitmap을 반환
+    "room": String, // 메시지가 온 방의 이름
+    "content": String, // 메시지의 내용
+    "isGroupChat": Boolean, // 방 내 인원이 3인 이상인지의 여부
+    "isDebugRoom": Boolean, // 디버깅룸에서 온 메시지인지의 여부
+    "author": { // 메시지 전송자에 대한 정보를 담고 있는 객체
+        "name": String, // 메시지를 보낸 유저의 이름
+        "avatar": { // 메시지 전송자 프로필에 대한 정보
+            "getBase64": Function, // 전송자 프로필의 Base64 값을 반환
+            "getBitmap": Function // 전송자 프로필의 android.graphics.Bitmap을 반환
         }
     },
-    "reply" : Function(content), // 메시지가 온 방에 content를 전송 (content: String)
-    "markAsRead" : Function, // 메시지가 온 방의 알림을 읽음 처리 
-    "packageName" : String // 메시지가 온 메신저 앱의 패키지명
+    "reply": Function(content), // 메시지가 온 방에 content를 전송 (content: String)
+    "markAsRead": Function, // 메시지가 온 방의 알림을 읽음 처리 
+    "packageName": String // 메시지가 온 메신저 앱의 패키지명
 }</code></pre>
                         </article>
                     </div>
@@ -2877,25 +2859,146 @@ doc: org.jsoup.nodes.Document</code></pre>
                         </article>
                         <article>
                             <pre><code class="language-json">{
-    "command" : String, // 명령어의 이름 ('/angles 30 60 90' 이라는 메시지일 때 "angles")
-    "args" : Array, // 명령어의 인자들의 배열 (인자가 없을 경우 길이가 0인 배열 반환; 가령, '/angles 30 60 90' 이라는 메시지일 때 ["30", "60", "90"])
-    "room" : String, // 메시지가 온 방의 이름
-    "content" : String, // 메시지의 내용
-    "isGroupChat" : Boolean, // 방 내 인원이 3인 이상인지의 여부
-    "isDebugRoom" : Boolean, // 디버깅룸에서 온 메시지인지의 여부
-    "author" : { // 메시지 전송자에 대한 정보를 담고 있는 객체
-        "name" : String, // 메시지를 보낸 유저의 이름
-        "avatar" : { // 메시지 전송자 프로필에 대한 정보
-            "getBase64" : Function, // 전송자 프로필의 Base64 값을 반환
-            "getBitmap" : Function // 전송자 프로필의 android.graphics.Bitmap을 반환
+    "command": String, // 명령어의 이름 ('/angles 30 60 90' 이라는 메시지일 때 "angles")
+    "args": Array, // 명령어의 인자들의 배열 (인자가 없을 경우 길이가 0인 배열 반환; 가령, '/angles 30 60 90' 이라는 메시지일 때 ["30", "60", "90"])
+    "room": String, // 메시지가 온 방의 이름
+    "content": String, // 메시지의 내용
+    "isGroupChat": Boolean, // 방 내 인원이 3인 이상인지의 여부
+    "isDebugRoom": Boolean, // 디버깅룸에서 온 메시지인지의 여부
+    "author": { // 메시지 전송자에 대한 정보를 담고 있는 객체
+        "name": String, // 메시지를 보낸 유저의 이름
+        "avatar": { // 메시지 전송자 프로필에 대한 정보
+            "getBase64": Function, // 전송자 프로필의 Base64 값을 반환
+            "getBitmap": Function // 전송자 프로필의 android.graphics.Bitmap을 반환
         }
     },
-    "reply" : Function(content), // 메시지가 온 방에 content를 전송 (content: String)
-    "markAsRead" : Function, // 메시지가 온 방의 알림을 읽음 처리 
-    "packageName" : String // 메시지가 온 메신저 앱의 패키지명
+    "reply": Function(content), // 메시지가 온 방에 content를 전송 (content: String)
+    "markAsRead": Function, // 메시지가 온 방의 알림을 읽음 처리 
+    "packageName": String // 메시지가 온 메신저 앱의 패키지명
 }</code></pre>
                         </article>
                     </div>
+                </div>
+            </section>
+            <section id="advanced">
+                <div class="con" id="dd4-1">
+                    <h2 class="title">패키지/클래스</h2>
+                    <article>
+                        <p><mark>Java의 패키지 / 클래스와 연관있는 내용이기 때문에 이에 대한 지식을 가지고 있어야 읽기 수월할 거예요..</mark></p>
+                    </article>
+                    <article>
+                        <p>카카오톡봇 개발에 사용되는 자바스크립트는 Java로 구현된 Rhino엔진이라고 했었죠. 그렇기에 다른 자바스크립트 엔진과 다른 점이 있어요. 그 중 하나가 바로 <strong>Java의 클래스를 사용할 수 있다는 것이죠!</strong></p>
+                        <p>음.. 이게 왜 이점이 되는지 잘 모르겠다고요? Java클래스 중에는 원래 JS만으로는 한계가 있는 것들을 가능케 하는 것들이 있기 때문이에요. 그럼 이제 Java의 패키지와 클래스를 사용하는 방법을 알아볼까요?</p>
+                    </article>
+                    <article>
+                        <p>사실 별거 없어요. 자바에서 사용하는 것 처럼 그냥 아래와 같이 사용하면 되는 거니까요.</p>
+                    </article>
+                    <article>
+                        <pre><code class="language-javascript">new java.io.File('sdcard/folder1/');
+java.lang.Thread.sleep(1000);</pre></code>
+                    </article>
+                    <article>
+                        <p>아, 근데 클래스의 전체 이름은 사용하기에 조금 긴 느낌이 있잖아요. 그래서 자바에서는 <strong>임포트(Import)</strong>를 하죠. Rhino엔진에서도 패키지와 클래스의 임포트를 지원해요!</p>
+                    </article>
+                    <article>
+                        <pre><code class="language-javascript">importClass(java.io.File);
+importPackage(java.lang);
+
+new File('sdcard/folder1/');
+Thread.sleep(1000);</pre></code>
+                    </article>
+                    <article>
+                        <p>다만, 한계가 있어요. 자바의 클래스명과 자바스크립트의 내장객체 이름이 같은 경우에는 자바의 전체 클래스명을 사용해야 예기치 않은 오류를 방지할 수 있어요. 예를 들자면, 자바의 <code class="block">java.lang.String</code> 클래스와 자바스크립트의 <code class="block">String</code> 객체 말이죠.</p>
+                    </article>
+                </div>
+                <div class="con" id="dd4-2">
+                    <h2 class="title">ADB</h2>
+                    <article>
+                        <p><mark>내용이 다소 미약하므로 <a href="https://github.com/kbotdocs/kbotdocs/pulls" target="_blank">여기에서</a> 문서의 작성을 도와주세요!</mark></p>
+                    </article>
+                    <article>
+                        <p>카카오톡봇 개발을 컴퓨터로 하는 분들 계신가요? 컴퓨터에서 개발하고 휴대폰으로 옮기는게 귀찮을 수 있어서 메신저봇R은 <storng>ADB</storng>를 지원합니다. 아래에 예제를 달아놓을게요.</p>
+                        <p><a href="https://github.com/VioletXF/MessengerBotDebugBridge">MDB(MessengerBot Debug Bridge) 예제</a></p>
+                    </article>
+                    <article class="table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Actions</th>
+                                    <th>Extras</th>
+                                    <th>설명</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code class="block">com.xfl.msgbot.broadcast.compile</code></td>
+                                    <td><code class="block">name: String</code></td>
+                                    <td>
+                                        이름이 <code class="block">name</code>인 <code class="block">Bot</code> 객체를 컴파일합니다.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code class="block">com.xfl.msgbot.broadcast.set_bot_power</code></td>
+                                    <td><code class="block">name: String, power: Boolean</code></td>
+                                    <td>
+                                        이름이 <code class="block">name</code>인 <code class="block">Bot</code> 객체의 작동 여부를 제어합니다.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code class="block">com.xfl.msgbot.broadcast.set_activation</code></td>
+                                    <td><code class="block">activation: Boolean</code></td>
+                                    <td>
+                                        메신저봇R의 작동 여부를 제어합니다.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </article>
+                </div>
+                <div class="con" id="dd4-3">
+                    <h2 class="title">소켓 통신</h2>
+                    <article>
+                        <p><mark>내용이 다소 미약하므로 <a href="https://github.com/kbotdocs/kbotdocs/pulls" target="_blank">여기에서</a> 문서의 작성을 도와주세요!</mark></p>
+                    </article>
+                    <article>
+                        <p>소켓 통신을 통해 카카오톡봇을 구동하는 기기 외의 기기에서도 메신저봇R에 접근하게 할 수도 있어요!</p>
+                        <p>PC에서 메신저봇으로 요청을 보내든, 메신저봇에서 PC로 요청을 보내든 한줄로 된 JSON 형태로 보내야 해요. 메신저봇이 <code class="block">readLine</code>으로 요청을 처리하거든요.</p>
+                        <p>아래는 <strong>PC에서 메신저봇으로</strong> 요청을 보낼 때 필요한 데이터의 형태에요.</p>
+                    </article>
+                    <article>
+                        <pre><code class="language-json">{
+    "name": "debugRoom",
+    "data": {
+        "botName": String, // 봇의 이름
+        "authorName": String, // 메시지 전송자 이름
+        "roomName": String, // 방의 이름
+        "isGroupChat": Boolean, // 방 내 인원이 3인 이상인지의 여부
+        "packageName": String, // 메시지가 온 앱의 패키지명
+        "message": String // 메시지 내용
+    }
+}</code></pre>
+                    </article>
+                    <article>
+                        <p>위의 JSON을 사용하여 요청을 보낼 땐 아래와 같이 보내면 되겠죠?</p>
+                    </article>
+                    <article>
+                        <pre><code class="language-json">{ "name": "debugRoom", "data": { "botName": String, "authorName": String, "roomName": String, "isGroupChat": Boolean, "packageName": String, "message": String  } }</code></pre>
+                    </article>
+                    <article>
+                        <p>그리고 아래 JSON은 <strong>메신저봇에서 PC로</strong> 요청을 보낼 때 필요한 데이터의 형태이죠.</p>
+                    </article>
+                    <article>
+                        <pre><code class="language-json">{
+    "name": "debugRoom",
+    "data": {
+        "botName": String, // 봇의 이름
+        "authorName": String, // 메시지 전송자 이름
+        "roomName": String, // 방의 이름
+        "message": String, // 메시지 내용
+        "isBot": Boolean // 메시지 전송자가 봇인가에 대한 불린 값
+    }
+}</code></pre>
+                    </article>
                 </div>
             </section>
             <section id="appendix">
@@ -2914,10 +3017,13 @@ doc: org.jsoup.nodes.Document</code></pre>
                 <div class="con" id="dd6-2">
                     <h2 class="title">문의하기</h2>
                     <article>
-                        <p><strong>카카오톡 봇에 대해 더 궁금한 점이 있으신가요?</strong> 그러면 <a href="https://open.kakao.com/o/grwzHthd" class="anchor" target="_blank">이 오픈채팅방</a>에 방문해보세요!</p>
+                        <p><strong>카카오톡 봇에 대해 더 궁금한 점이 있으신가요?</strong> 그러면 <a href="https://open.kakao.com/o/grwzHthd" target="_blank">이 오픈채팅방</a>에 방문해보세요!</p>
                     </article>
                     <article>
-                        <p><strong>카카오톡봇 문서에 대한 피드백이나 내용 / 기능 상의 오류 등에 대한 보고</strong>는 <a href="https://open.kakao.com/me/nolbo" class="anchor" target="_blank">이 오픈프로필</a>에다 해주세요! (맞춤법에 대한 보고도 환영이랍니다.)</p>
+                        <p><strong>카카오톡봇 문서에 대한 피드백이나 내용 / 기능 상의 오류 등에 대한 보고</strong>는 <a href="https://github.com/kbotdocs/kbotdocs/issues" target="_blank">깃허브 이슈</a>에다 해주세요! (맞춤법에 대한 보고도 환영이랍니다.)</p>
+                    </article>
+                    <article>
+                        <p>그게 아니라 다른 내용 추가 등에 대해서는... <a href="https://github.com/kbotdocs/kbotdocs/pulls" target="_blank">Pull request</a>를 달아주세요!</p>
                     </article>
                 </div>
             </section>
