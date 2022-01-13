@@ -14,7 +14,7 @@ code, code * {
     line-height: var(--text-line-height);
 }
 
-code.block {
+code[data-b] {
     font-weight: 700;
 }
 
