@@ -1,0 +1,35 @@
+
+a.contributor {
+    font-weight: 700;
+    font-size: 24px;
+    text-decoration: underline;
+    text-decoration-thickness: 8px;
+    cursor: pointer;
+    line-height: 1;
+    margin-right: 8px;
+    text-underline-position: under;
+}
+
+a.contributor#jisungbin {
+    text-decoration-color: #b1f2ff;
+}
+
+a.contributor#violetxf {
+    text-decoration-color: #c800ff;
+}
+
+a.contributor#doami {
+    text-decoration-color: #00e1ff;
+}
+
+a.contributor#justicehui {
+    text-decoration-color: #ffbf00;
+}
+
+a.contributor#pinmilk {
+    text-decoration-color: #ff9dff;
+}
+
+a.contributor#ju- {
+    text-decoration-color: #00ffea;
+}
