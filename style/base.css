@@ -68,5 +68,5 @@ strong {
 }
 
 a:link, a:visited {
-    color: var(--text-color);
+    color: inherit;
 }
