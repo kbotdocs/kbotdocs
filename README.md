@@ -38,7 +38,7 @@ KBotDocs 작성 방법
 ```
 세부적인 내용은 `article` 내에 작성합니다. `contentId`은 `0-0`과 같은 형식입니다.
 
-그리고 `aside div#list-box ul.list#{sectionId}` 내에 다음과 같이 작성합니다:
+그리고 `aside div#list-box details#{sectionId}` 내에 다음과 같이 작성합니다:
 ```HTML
 <li class="list-el" id="d{contentId1}">{contentName1}</li>
 <li class="list-el" id="d{contentId2}">{contentName2}</li>

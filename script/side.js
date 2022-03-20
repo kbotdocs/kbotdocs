@@ -2,8 +2,7 @@
 const HEADER        = document.querySelector('header');
 const ASIDE         = document.querySelector('aside');
 const HEADER_TITLE  = document.querySelector('div#header-title');
-const LIST_TITLE    = document.querySelectorAll('h3.list-title');
-const LIST_EL       = document.querySelectorAll('li.list-el');
+const LIST_EL       = document.querySelectorAll('div.list-el');
 const SMALL_LIST_EL = document.querySelectorAll('li.small-list-el');
 const ANCHOR        = document.querySelectorAll('a.anchor');
 
@@ -13,14 +12,6 @@ if(window.matchMedia('(max-width: 767px)').matches) {
         ASIDE.style.display = ((ASIDE.style.display === 'none') ? 'block' : 'none');
     });
 }
-
-LIST_TITLE.forEach(e => {
-    e.addEventListener('click', (_e) => {
-        _e.preventDefault();
-        if(e.hasAttribute('data-selected')) e.removeAttribute('data-selected');
-        else e.setAttribute('data-selected', '');
-    });
-});
 
 LIST_EL.forEach(e => {
     e.addEventListener('click', (_e) => {

@@ -14,7 +14,7 @@ main {
     --td-padding: 16px;
     --code-font-size: 14px;
 
-    font-family: 'Pretendard';
+    font-family: 'Open Sans', 'Pretendard';
     padding-top: var(--main-padding-top);
     padding-left: 48px;
     padding-right: var(--viewbox-padding);

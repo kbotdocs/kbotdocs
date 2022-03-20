@@ -32,33 +32,29 @@ div#list-box {
     overflow: auto;
 }
 
-ul.list {
+details {
     margin-bottom: 16px;
 }
 
-h3.list-title, li.list-el {
-    font-family: 'Pretendard';
+summary, div.list-el {
+    font-family: 'Open Sans', 'Pretendard';
     cursor: pointer;
     color: var(--text-color);
 }
 
-h3.list-title {
+summary {
     font-size: var(--title-font-size);
     font-weight: normal;
     margin: var(--title-margin);
 }
 
-li.list-el {
-    display: none;
+div.list-el {
     font-size: var(--list-el-font-size);
     line-height: var(--text-line-height);
     margin-left: var(--list-el-margin-left);
 }
 
-h3.list-title[data-selected] {
+details[open] summary {
     font-weight: var(--title-font-weight);
 }
 
-h3[data-selected] ~ li.list-el {
-    display: block;
-}
