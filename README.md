@@ -15,10 +15,17 @@ KBotDocs 작성 방법
 
 그리고 `aside div#list-box` 내에 아래와 같이 작성합니다:
 ```HTML
-<ul class="list" id="{sectionId}"><h3 class="list-title">{sectionName}</h3>
-  
-</ul>
+<details id={sectionId}>
+    <summary>{sectionTitle}</summary>
+    <div class="list-el" id="d{contentId1}">{contentName1}</div>
+    <div class="list-el" id="d{contentId2}">{contentName2}</div>
+    <div class="list-el" id="d{contentId3}">{contentName3}</div>
+    ...
+    <div class="list-el" id="d{contentIdN}">{contentNameN}</div>
+</details>
 ```
+
+`contentId`는 `0-0`과 같은 형식입니다.
 
 
 ### 2. 내용 작성
