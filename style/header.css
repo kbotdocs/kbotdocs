@@ -20,7 +20,7 @@ header {
 div#header-title {
     display: flex;
     align-items: center;
-    font-family: 'Poppins';
+    font-family: 'Outfit';
 }
 
 div#header-title * {
