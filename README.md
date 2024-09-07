@@ -1,59 +1,36 @@
-## kbotdocs
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-KBotDocs 작성 방법
+## Getting Started
 
-<hr>
+First, run the development server:
 
-### 1. 편 만들기
-
-`main` 내에 아래와 같이 작성합니다:
-```HTML
-<section id="{sectionId}">
-   
-</section>
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-그리고 `aside div#list-box` 내에 아래와 같이 작성합니다:
-```HTML
-<details id={sectionId}>
-    <summary>{sectionTitle}</summary>
-    <div class="list-el" id="d{contentId1}">{contentName1}</div>
-    <div class="list-el" id="d{contentId2}">{contentName2}</div>
-    <div class="list-el" id="d{contentId3}">{contentName3}</div>
-    ...
-    <div class="list-el" id="d{contentIdN}">{contentNameN}</div>
-</details>
-```
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-`contentId`는 `0-0`과 같은 형식입니다.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-### 2. 내용 작성
+## Learn More
 
-`section#{sectionId}` 내에 다음과 같이 작성합니다:
-```HTML
-<div class="con" id="dd{contentId}">
-  <h2 class="title">{contentName}</h2>
-  <article>
-  </article>
-  <article>
-  </article>
-  ...
-  <article>
-  </article>
-</div>
-```
-<br />
+To learn more about Next.js, take a look at the following resources:
 
-> #### 2-1 문장 작성
-> 문장 작성은 다음과 같이 합니다:
-> ```HTML
-> <article>
->   <p>{paragraph1}</p>
->   <p>{paragraph2}</p>
-> </article>
-> ```
-> 줄바꿈은 절대로 `<br />`를 사용하지 않습니다. `<p>`태그를 위 코드처럼 하나를 더 사용하여 줄바꿈을 합니다.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-> #### 2-2 
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
