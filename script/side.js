@@ -36,6 +36,10 @@ ANCHOR.forEach(e => {
     });
 });
 
+document.getElementById("deprecatedcancel").addEventListener("click", () => {
+    document.getElementById('deprecated').style.display = 'none';
+});
+
 function scroll(id) {
     let bh = 'smooth';
 

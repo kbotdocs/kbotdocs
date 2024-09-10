@@ -17,6 +17,22 @@ header {
     border-bottom: 2px solid var(--border-color);
 }
 
+#deprecated {
+    --alert-bg-color: #ffe6aa;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+    width: calc(100% - var(--scroll-size));
+    background-color: var(--alert-bg-color);
+    border-bottom: 1px solid #ffb800;
+    color: var(--text-color);
+    padding: 12px;
+    font-family: 'Open Sans', 'Pretendard', serif;
+}
+
 div#header-title {
     display: flex;
     align-items: center;

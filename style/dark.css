@@ -14,4 +14,6 @@ main {
     --table-bold-border-color: black;
 }
 
-
+#deprecated {
+    --alert-bg-color: #3a2600;
+}
