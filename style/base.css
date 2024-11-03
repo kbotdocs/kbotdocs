@@ -48,19 +48,41 @@
 html, body {
     width: var(--viewbox-width);
     height: 100vh;
-    background-color: var(--background-color);
+    background-color: #17181C;
+    color: #F1F2F4;
+    font-family: 'Open Sans', 'Pretendard';
 }
 
-aside, main {
-    height: 100%;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-div#global-box {
-    margin-top: var(--header-height);
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+#description {
+    line-height: 1.625;
+}
+
+#logo {
+    margin-top: 24px;
     width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: var(--layout-template);
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    color: #C7C9D1;
+}
+
+img {
+    width: 32px;
+    height: auto;
 }
 
 strong {
